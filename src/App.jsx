@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className='w-full py-2 min-h-screen flex justify-center items-center overflow-y-auto'>
+    <div className='w-full py-2 min-h-screen flex justify-center items-stretch overflow-y-auto md:items-center'>
       <div className='container px-3'>
         <div className='w-full h-full border rounded m-auto shadow-md md:w-2/4'>
           <div className='bg-neutral-100 p-2 border-b-2 border-gray-500'>
