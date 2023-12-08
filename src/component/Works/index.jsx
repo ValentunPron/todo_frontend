@@ -3,7 +3,7 @@ import React from "react";
 import { useMutation, useQueryClient } from "react-query";
 
 async function removeWork(id) {
-	await axios.delete(`/api/works/removeWork/${id}`);
+	await axios.delete(`https://todo-backend-9bmu.onrender.com/api/works/removeWork/${id}`);
 }
 
 export const Works = ({ id, title, status }) => {
@@ -11,13 +11,13 @@ export const Works = ({ id, title, status }) => {
 	const [value, setValue] = React.useState(title);
 
 	async function setStatus(status) {
-		await axios.patch(`/api/works/status/${id}`, {
+		await axios.patch(`https://todo-backend-9bmu.onrender.com/api/works/status/${id}`, {
 			status: !status
 		});
 	}
 
 	async function eddingWork(title) {
-		await axios.patch(`/api/works/updateWork/${id}`, {
+		await axios.patch(`https://todo-backend-9bmu.onrender.com/api/works/updateWork/${id}`, {
 			title: title
 		});
 	}

@@ -4,13 +4,13 @@ import axios from 'axios';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 
 async function fetchWorks() {
-  const { data } = await axios.get('/api/works/get');
+  const { data } = await axios.get('https://todo-backend-9bmu.onrender.com/api/works/get');
 
   return data;
 }
 
 async function createWork(works) {
-  await axios.post('/api/works/post', {
+  await axios.post('https://todo-backend-9bmu.onrender.com/api/works/post', {
     title: works,
   });
 }
@@ -67,7 +67,9 @@ function App() {
             <div className='min-h-[300px] py-5 relative'>
               <div className='h-full'>
                 {
-                  data && data.map((work) => <Works title={work.title} status={work.status} id={work._id} key={work._id} />)
+                  data ?
+                    data.map((work) => <Works title={work.title} status={work.status} id={work._id} key={work._id} />)
+                    : ''
                 }
                 {
                   data && data.length <= 0 && <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Список завдань пусткий</h3>
