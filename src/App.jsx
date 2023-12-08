@@ -37,7 +37,7 @@ function App() {
         <div className='w-full h-full border rounded m-auto shadow-md md:w-2/4'>
           <div className='bg-neutral-100 p-2 border-b-2 border-gray-500'>
             <h1 className='font-bold flex items-center'>
-              Todos
+              Todo's
               {
                 data && <span className='text-[12px] text-gray-500'>({data.length})</span>
               }
@@ -59,7 +59,7 @@ function App() {
                     className="absolute top-0 end-[-2px] p-2 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     onClick={() => onClickCreate(newWorks)}
                   >
-                    <span>Sumbit</span>
+                    <span>Submit</span>
                   </button>
                 </div>
               </div>
@@ -69,10 +69,10 @@ function App() {
                 {
                   data ?
                     data.map((work) => <Works title={work.title} status={work.status} id={work._id} key={work._id} />)
-                    : <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Сервер не працює</h3>
+                    : <h3 className='text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>The server is down</h3>
                 }
                 {
-                  data && data.length <= 0 && <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Список завдань пусткий</h3>
+                  data && data.length <= 0 && <h3 className='text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>The task list is empty</h3>
                 }
               </div>
             </div>

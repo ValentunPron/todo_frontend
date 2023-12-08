@@ -54,7 +54,7 @@ export const Works = ({ id, title, status }) => {
 	return (
 		editing
 			? (
-				<div className=" flex justify-between px-4 border-b-[1.5px] border border-gray-400">
+				<div className={`flex justify-between px-4 border-b-[1.5px] border border-gray-400 `}>
 					<div className=" flex items-center space-x-3 w-full">
 						<input
 							type="text"
@@ -82,7 +82,7 @@ export const Works = ({ id, title, status }) => {
 						</button>
 					</div>
 				</div>)
-			: (<div className='flex justify-between px-4 py-3 border-b-[1.5px] border border-gray-400'>
+			: (<div className={`flex justify-between px-4 py-3 border-b-[1.5px] border border-gray-400 ${status ? 'bg-gray-300' : ''}`}>
 				<div className="flex items-center">
 					<input
 						type="checkbox"
