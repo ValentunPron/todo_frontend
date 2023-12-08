@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4444",
+  "proxy": "https://todo-backend-9bmu.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
