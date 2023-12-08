@@ -69,7 +69,7 @@ function App() {
                 {
                   data ?
                     data.map((work) => <Works title={work.title} status={work.status} id={work._id} key={work._id} />)
-                    : data.length <= 0 && <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Список завдань пусткий</h3>
+                    : <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Сервер не працює</h3>
                 }
                 {
                   data && data.length <= 0 && <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold'>Список завдань пусткий</h3>
